@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Libre+Baskerville&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Scada&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Satisfy&display=swap');
+
+h1 {
+    display: inline;
+    font-size: 45px;
+    
+}
+
+header>h1 {
+    font-family: 'EB Garamond', serif;
+    box-sizing: border-box;
+    
+}
+
+header {
+    display: inline;
+    
+}
+
+#idImg1 {
+    width: 8%;
+    height: 8%;
+    vertical-align: middle;
+
+}
+
+h3 {
+    font-family: 'EB Garamond', serif;
+    background-color: rgb(152, 168, 168, 0.3);
+}
+
+p {
+    font-family: 'Scada', sans-serif;
+    text-align: justify;
+}
+
+p:first-letter {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 15px;
+    color: rgba(0, 0, 0, 0.4);
+    font-family: 'Satisfy', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: lower-alpha;
+}
+
+textarea {
+    display: inline;
+    width: 100%;
+    height: 200px;
+    resize: none;
+    font-family: 'Scada', sans-serif;
+    font-size: 13px;
+    color: rgb(77, 60, 146);
+}
+
+footer {
+    background-color: rgb(152, 168, 168, 0.5);
+    text-align: center;
+}
+
+#idDiv1 {
+    font-size: 12px;
+}

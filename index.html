@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller TypeScript</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img id="idImg1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png" alt="Logo TypeScript">
+        <h1>Taller TypeScript</h1>
+    </header>
+    <hr>
+    <article>
+        <section id="idSec1">
+            <h3>¿Qué es TypeScript?</h3>
+            <p>Es un lenguaje de programacion fuertemente tipado de código abierto, desarrollado y mantenido por Microsoft.
+            TypeScript extiende la sintaxis de JavaScript, por tanto cualquier código JavaScript existente debería funcionar sin problemas.</p> 
+            <p>Está pensado para grandes proyectos, los cuales a través de un compilador de TypeScript se traducen a código JavaScript original.</p>
+            <p>TypeScript es usado para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor, o extensiones para programas </p>
+        </section>
+        <hr>
+        <section id="idSec2">
+            <h3>¿Que son los tipos de datos?</h3>
+            <p>El sistema de tipos de Typescript realiza una formalización de los tipos de Javascript, mediante una representación estática de sus tipos dinámicos. Esto permite a los desarrolladores definir variables y funciones tipadas sin perder la esencia de Javascript. Poder definir los tipos durante el tiempo de diseño nos ayuda a evitar errores en tiempo de ejecución, como podría ser pasar el tipo de variable incorrecto a una función.         
+            </p>
+        </section>
+        <hr>
+        <section id="idSec3">
+            <h3>Revisar los siguientes tipos de datos:</h3>
+            <ul>
+                <li><a href="#idTxA1" onclick="result(idP1Result)" >Booleanos</a></li>
+                <li><a href="#idTxA1" onclick="result(idP2Result)">Números</a></li>
+                <li><a href="#idTxA1" onclick="result(idP3Result)">String</a></li>
+                <li><a href="#idTxA1" onclick="result(idP4Result)">Tipo Any</a></li>
+                <li><a href="#idTxA1" onclick="result(idP5Result)">Arreglos</a></li>
+                <li><a href="#idTxA1" onclick="result(idP6Result)">Tuplas</a></li>
+                <li><a href="#idTxA1" onclick="result(idP7Result)">Enumeraciones</a></li>
+                <li><a href="#idTxA1" onclick="result(idP8Result)">Retorno Void</a></li>
+                <li><a href="#idTxA1" onclick="result(idP9Result)">Null</a></li>
+                <li><a href="#idTxA1" onclick="result(idP10Result)">Undefined</a></li>
+            </ul>
+            <textarea name="" id="idTxA1" cols="60" rows="10" readonly  ></textarea>
+        </section>
+        <section>
+            <div id="idDiv1" hidden>
+                <p  id="idP1Result" >
+                Representa valores lógicos verdaderos y falsos.
+
+
+                            let a = 5;
+                            let b = 5;
+                            (a == b) &nbsp; //Returns true
+                            (a != b) &nbsp; //Returns false
+                </p>
+            </div>
+            <div id="idDiv2" hidden>
+                <p id="idP2Result">
+                    Representa valores de coma flotante de 64 bits de doble precisión que se pueden utilizar para 
+                    representar tanto números enteros como fracciones.
+                    
+                            var a = 15;
+                            var b = 25;
+                            var c = a + b; // El valor de c es 40 que es la suma de las variable a y b.     
+                </p>
+            </div>
+            <div id="idDiv3" hidden>
+                <p id="idP3Result">
+                    Representa una secuencia de caracteres.
+
+                            var text = "Hello world!";
+                            console.log(text);  // Imprimir el valor de la variable en consola.
+                            Hello world!
+                </p>
+            </div>
+            <div id="idDiv4" hidden>
+                <p id="idP4Result">
+                    En algunas situaciones, no todo el tipo de información está disponible o su declaración requeriría un 
+                    esfuerzo inadecuado. Estos pueden ocurrir para valores de código que se ha escrito sin TypeScript o 
+                    una biblioteca de terceros. En estos casos, es posible que deseemos excluirnos de la verificación de tipos.
+                    Para hacerlo, etiquetamos estos valores con el anytype:
+
+                            declare function getValue(key: string): any;
+                            // OK, return value of 'getValue' is not checked
+                            const str: string = getValue("myStri
+                    
+                </p>
+            </div>
+            <div id="idDiv5" hidden>
+                <p id="idP5Result">
+                    TypeScript, como JavaScript, le permite trabajar con matrices de valores. Los tipos de matriz se pueden
+                    escribir de dos formas. En el primero, usa el tipo de los elementos seguido de []para denotar una matriz
+                    de ese tipo de elemento:
+
+                            let list: number[] = [1, 2, 3];
+                    
+                </p>
+            </div>
+            <div id="idDiv6" hidden>
+                <p id="idP6Result">
+                    Los tipos de tupla le permiten expresar una matriz con un número fijo de elementos cuyos tipos son 
+                    conocidos, pero no es necesario que sean los mismos. Por ejemplo, es posible que desee representar un 
+                    valor como un par de string y number:
+
+                            // Declare a tuple type
+                            let x: [string, number];
+                            // Initialize it
+                            x = ["hello", 10]; // OK
+                            // Initialize it incorrectly
+                            x = [10, "hello"]; // Error
+                            Type 'number' is not assignable to type 'string'.
+                            Type 'string' is not assignable to type 'number'.
+                    
+                </p>
+            </div>
+            <div id="idDiv7" hidden>
+                <p id="idP7Result">
+                    Una adición útil al conjunto estándar de tipos de datos de JavaScript es enum. Como en lenguajes como C #,
+                    una enumeración es una forma de dar nombres más descriptivos a conjuntos de valores numéricos. 
+                            enum Color {
+                            Red,
+                            Green,
+                            Blue,
+                            }
+                            let c: Color = Color.Green;
+                    De forma predeterminada, las enumeraciones comienzan a numerar a sus miembros a partir de 0. Puede 
+                    cambiar esto configurando manualmente el valor de uno de sus miembros. Por ejemplo, podemos comenzar 
+                    el ejemplo anterior 1 en lugar de 0:
+                    
+                </p>
+            </div>
+            <div id="idDiv8" hidden>
+                <p id="idP8Result">
+                    voides un poco lo contrario de any: la ausencia de tener ningún tipo en absoluto. Comúnmente, puede ver 
+                    esto como el tipo de retorno de funciones que no devuelven un valor:
+
+                            function warnUser(): void {
+                            console.log("This is my warning message");
+                            }
+
+                    Declarar variables de tipo voidno es útil porque solo puede asignar null(solo si strictNullChecksno se 
+                    especifica, consulte la siguiente sección) o undefined ellas:
+
+                            let unusable: void = undefined;
+                            // OK if `--strictNullChecks` is not given
+                            unusable = null;
+                    
+                </p>
+            </div>
+            <div id="idDiv9" hidden>
+                <p id="idP9Result">
+                    Se utiliza para representar una ausencia intencionada de un valor de objeto.
+
+                            var res = ""; //se declara una variable que su valor es null.
+                </p>
+            </div>
+            <div id="idDiv10" hidden>
+                <p id="idP10Result">
+                    Representa variables no inicializadas.
+
+                            let variable;
+                            console.log(variable); // El valor de la variable sera de tipo undefined, por que no ha sido inicializada.
+                    
+                </p>
+            </div>
+        </section>
+    </article>
+</body>
+<hr>
+<footer>
+    Create by Joan Andrés Rincón García &copy; 2021.
+</footer>
+<hr>
+</html>
