@@ -100,4 +100,8 @@ footer {
         width: 50%;
         height: 5%;
     }
+
+    h3 {
+        text-align: center;
+    }
 }
