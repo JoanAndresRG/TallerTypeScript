@@ -88,6 +88,15 @@ footer {
     font-size: 12px;
 }
 
+hr {
+    border: none; 
+    height: 2px;
+    color: #333;
+    background-color: #333;
+
+    
+}
+
 @media only screen and (max-width: 768px) {
     h1 {
         
