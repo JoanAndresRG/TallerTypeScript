@@ -81,7 +81,11 @@ textarea {
 footer {
     background-color: rgb(0, 122, 204,0.85);
     text-align: center;
+<<<<<<< HEAD
     color: rgb(255, 255, 255);
+=======
+    color: rgb(255,255,255);
+>>>>>>> 7e75581847ff74a763862ca3fbe6a8cd000d2e3e
 }
 
 #idDiv1 {
